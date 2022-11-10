@@ -32,6 +32,13 @@ resource "aws_security_group" "aws_asg" {
     Name = "sgroup"
   }
 }
+resource "aws_eip" "eip" {
+  vpc = true
+  instance = aws_instance.my_first_instance.id
+  depends_on = [
+    aws_instance.my_first_instance
+  ]
+}
 resource "aws_instance" "my_first_instance"{
   ami                    = "ami-09a5c873bc79530d9"
   instance_type          = "t2.micro"
