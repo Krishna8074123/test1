@@ -48,7 +48,7 @@ resource "aws_internet_gateway" "gw" {
 #   ]
 # }
 resource "aws_instance" "my_first_instance"{
-  ami                    = "ami-09a5c873bc79530d9"
+  ami                    = "ami-055166f8a8041fbf1"
   instance_type          = "t2.micro"
   key_name               = "jenkins-task"
   subnet_id = aws_subnet.subnet.id
