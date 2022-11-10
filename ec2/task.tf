@@ -24,8 +24,8 @@ resource "aws_security_group" "aws_asg" {
   vpc_id      = aws_vpc.aws_vpc.id
   ingress {
     description = "tcp from vpc"
-    from_port   = 80
-    to_port     = 80
+    from_port   = 22
+    to_port     = 22
     protocol    = "tcp"
     cidr_blocks = [aws_vpc.aws_vpc.cidr_block]
   }
