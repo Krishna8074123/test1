@@ -47,10 +47,14 @@ resource "aws_internet_gateway" "gw" {
 #     aws_instance.my_first_instance
 #   ]
 # }
-resource "aws_instance" "my_first_instance"{
+module "ec2_instance" {
+  source  = "terraform-aws-modules/ec2-instance/aws"
+  version = "~> 3.0"
+# resource "aws_instance" "my_first_instance"{
   ami                    = "ami-055166f8a8041fbf1"
   instance_type          = "t2.micro"
   key_name               = "jenkins-task"
+  monitoring             = true
   subnet_id = aws_subnet.subnet.id
   associate_public_ip_address = true
   security_groups         = [aws_security_group.aws_asg.id]
@@ -58,6 +62,7 @@ resource "aws_instance" "my_first_instance"{
   tags = {
  Name = "ec2_instance"
   }
+# }
   # provisioner "remote-exec" {
   # connection {
   #   host = aws_eip.eip.address
