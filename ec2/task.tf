@@ -42,6 +42,11 @@ resource "aws_instance" "my_first_instance"{
   tags = {
  Name = "ec2_instance"
   }
+  provisioner "ansible" {
+  connection {
+    command = "echo 'its working'"
+  }
+  }
 }
 
 
