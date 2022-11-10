@@ -49,11 +49,11 @@ resource "aws_instance" "my_first_instance"{
   tags = {
  Name = "ec2_instance"
   }
-  provisioner "local-exec" {
-  connection {
-    command = "echo 'its working'"
-  }
-  }
+  # provisioner "local-exec" {
+  # connection {
+  #   command = "echo 'its working'"
+  # }
+  # }
 }
 
 
