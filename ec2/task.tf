@@ -32,6 +32,13 @@ resource "aws_security_group" "aws_asg" {
     Name = "sgroup"
   }
 }
+resource "aws_internet_gateway" "gw" {
+  vpc_id = aws_vpc.aws_vpc.id
+
+  tags = {
+    Name = "main"
+  }
+}
 resource "aws_eip" "eip" {
   vpc = true
   instance = aws_instance.my_first_instance.id
