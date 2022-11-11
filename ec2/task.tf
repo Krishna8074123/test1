@@ -19,7 +19,7 @@ resource "aws_subnet" "public_subnet" {
   ]
 }
 resource "aws_security_group" "aws_asg" {
-  name        = "security-group"
+  name        = "security-groups"
   description = "Allow TLS inbound traffic"
   vpc_id      = aws_vpc.aws_vpc.id
   ingress {
