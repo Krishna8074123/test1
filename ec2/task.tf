@@ -46,13 +46,13 @@ resource "aws_internet_gateway" "gw" {
     Name = "main"
   }
 }
-resource "aws_eip" "eip" {
-  vpc = true
-  instance = aws_instance.my_first_instance.id
-  depends_on = [
-    aws_instance.my_first_instance
-  ]
-}
+# resource "aws_eip" "eip" {
+#   vpc = true
+#   instance = aws_instance.my_first_instance.id
+#   depends_on = [
+#     aws_instance.my_first_instance
+#   ]
+# }
 resource "aws_instance" "my_first_instance"{
   ami                    = "ami-055166f8a8041fbf1"
   instance_type          = "t2.micro"
