@@ -2,8 +2,8 @@ provider "aws" {
   region = "ap-southeast-2"
 }
 resource "aws_vpc" "aws_vpc" {
-  cidr_block = "10.10.0.0/16"
-   enable_dns_hostnames = true
+  cidr_block           = "10.10.0.0/16"
+  enable_dns_hostnames = true
   tags = {
     Name = "aws_vpc"
   }
@@ -30,10 +30,10 @@ resource "aws_security_group" "aws_asg" {
     cidr_blocks = ["0.0.0.0/0"]
   }
   egress {
-    from_port        = 0
-    to_port          = 0
-    protocol         = "-1"
-    cidr_blocks      = ["0.0.0.0/0"]
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = ["0.0.0.0/0"]
   }
   tags = {
     Name = "sgroup"
@@ -53,17 +53,17 @@ resource "aws_internet_gateway" "gw" {
 #     aws_instance.my_first_instance
 #   ]
 # }
-resource "aws_instance" "my_first_instance"{
-  ami                    = "ami-055166f8a8041fbf1"
-  instance_type          = "t2.micro"
-  key_name               = "jenkins-task"
-  monitoring             = true
-  subnet_id = aws_subnet.subnet.id
+resource "aws_instance" "my_first_instance" {
+  ami                         = "ami-055166f8a8041fbf1"
+  instance_type               = "t2.micro"
+  key_name                    = "jenkins-task"
+  monitoring                  = true
+  subnet_id                   = aws_subnet.subnet.id
   associate_public_ip_address = true
-  security_groups         = [aws_security_group.aws_asg.id]
-  
+  security_groups             = [aws_security_group.aws_asg.id]
+
   tags = {
- Name = "ec2_instance"
+    Name = "ec2_instance"
   }
   # provisioner "remote-exec" {
   # connection {
