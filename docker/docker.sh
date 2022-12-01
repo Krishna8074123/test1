@@ -9,7 +9,11 @@ pipeline{
         }
         stage('terraform'){
             steps{
-                sh 'docker info'
+                sh '''
+                sudo apt update
+                curl -fsSL https://get.docker.com -oget-docker.sh
+                sh get-docker.sh
+                docker info'''
             }
         }
     }
