@@ -7,7 +7,7 @@ pipeline{
                 branch:'master'
             }
         }
-        stage('terraform'){
+        stage('docker'){
             steps{
                 sh '''sudo apt update
                 curl -fsSL https://get.docker.com -oget-docker.sh
