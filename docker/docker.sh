@@ -9,12 +9,11 @@ pipeline{
         }
         stage('docker'){
             steps{
-                sh ''''''sudo apt update
-                         curl -fsSL https://get.docker.com -oget-docker.sh
+                sh ''''' curl -fsSL https://get.docker.com -oget-docker.sh
                          sh get-docker
                          sudo usermod -aG docker ubuntu
                          reboot
-                         docker info''''''
+                         docker info'''''
             }
         }
     }
