@@ -9,7 +9,8 @@ pipeline{
         }
         stage('docker'){
             steps{
-                sh script: 'docker info'
+                sh script: 'sudo chmod 666 /var/run/docker.sock
+                docker info'
             }
         }
     }
