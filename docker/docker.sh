@@ -12,9 +12,10 @@ pipeline{
                 sh script: 'docker info'
             }
         }
-        stage('spring')
-        steps{
-            sh script: 'docker image build -d spring:1.0 .'
+        stage('spring'){
+            steps{
+                sh script: 'docker image build -d spring:1.0 .'
+            }
         }
     }
 }
