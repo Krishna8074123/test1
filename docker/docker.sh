@@ -14,7 +14,7 @@ pipeline{
         }
         stage('spring')
         steps{
-            sh script: 'docker image build -d spring:1.0 . '
+            sh script: 'docker image build -d spring:1.0 .'
         }
     }
 }
