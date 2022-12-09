@@ -1,5 +1,5 @@
 pipeline{
-    agent {label 'jdk-11'}
+    agent {label 'docker'}
     stages{
         stage('branch'){
             steps{
