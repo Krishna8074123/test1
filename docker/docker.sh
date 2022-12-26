@@ -14,7 +14,7 @@ pipeline{
         }
         stage('docker'){
             steps{
-                sh 'docker image build -t krishna8074123/test1:1.0 Dockerfile.sh'
+                sh 'docker image build -t krishna8074123/test1:1.0 Dockerfile'
             }
         }
     }
