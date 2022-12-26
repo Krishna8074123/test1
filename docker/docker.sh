@@ -9,6 +9,11 @@ pipeline{
         }
         stage('docker'){
             steps{
+                sh 'docker info'
+            }
+        }
+        stage('docker'){
+            steps{
                 sh 'docker image build -t Krishna8074123/test1:1.0 .'
             }
         }
