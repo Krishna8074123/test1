@@ -7,7 +7,7 @@ pipeline{
                 branch:"master"
             }
         }
-        stage('docker'){
+        stage('docke'){
             steps{
                 sh 'docker info'
             }
