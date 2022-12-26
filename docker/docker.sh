@@ -9,7 +9,7 @@ pipeline{
         }
         stage('docker'){
             steps{
-                sh 'docker image bulid -t spring:1.0 .'
+                sh 'docker image bulid -t Krishna8074123/test1 .'
             }
         }
     }
