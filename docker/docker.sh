@@ -16,7 +16,6 @@ pipeline{
             steps{
                 sh 'docker container run -d -P Krishna8074123/test1:1.0 '
             }
-        }
-        
+        } 
     }
 }
