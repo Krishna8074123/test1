@@ -9,12 +9,12 @@ pipeline{
         }
         stage('docker'){
             steps{
-                sh 'docker image build -t Krishna8074123/test1 .'
+                sh 'docker image build -t Krishna8074123/test1:1.0 .'
             }
         }
         stage('docker container'){
             steps{
-                sh 'docker container run -d -P Krishna8074123/test1 '
+                sh 'docker container run -d -P Krishna8074123/test1:1.0 '
             }
         }
         
