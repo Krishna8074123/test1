@@ -1,0 +1,21 @@
+# install docker using azure devops
+
+---
+trigger:
+- main
+stages:
+  - stage: ad
+    pool: DOCKER
+    jobs:
+      - job: ad
+        steps:
+          - script: ls
+  - stage: docker
+    pool: DOCKER2
+    jobs:
+      - job: dockerinfo
+        steps:
+          - script: docker info
+      - job:
+        steps:
+          - script: docker image build -t as2:2.0 .
