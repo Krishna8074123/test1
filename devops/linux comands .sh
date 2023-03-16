@@ -1,4 +1,4 @@
-#  linux commands
+### linux commands
 *  ls: list files and directories in the current directory
 *  ls -al :to show the all current directoriesire
 *  ls -lrt
@@ -35,6 +35,6 @@
 *    "-T" or "--print-type": Display the file system type along with the disk space information.
 *    "-i" or "--inodes": Display information about the number of free and used inodes 
 *  (i.e. data structures used by the file system to store information about files and directories).
-*
-*
-*
+# commands
+* to put star in all lines ctrl + H
+* put space of all lines search tab / back shift+tab
