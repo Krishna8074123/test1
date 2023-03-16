@@ -1,20 +1,20 @@
-# this is Ansible important points...
-Ansible is an open source automation tool that can be used to automate the configuration and management of servers, networks and other IT infrastructure.
-It is often used in conjuction with other tools such as terraform to provide a complete infrastructure as code solution.
-Ansible uses a simple human readable language called 'YAML' to define automation tasks called 'Playbooks".
-These playbooks are written in the form of plays, which consists of a set of tasks that are executed on one or more hosts.
-Ansible uses a push based approach, where the automation tasks are executed on the target hosts directly rather than requiring an agent to be installed on these hosts.
-This allows ansible to be used to automate a wide variety of system, including linux, windows and network devices.
-One of the main benefits of ansible is its ease of use.
-The yaml based playbooks are easy to read and understand even for non-technical users.
-Ansible provides a large number of pre-built modules called "ansible modules" that can be used to automate common tasks can be used to automate common tasks such as installing softwares, managing users and configuring services.
-Ansible allows for the management of multiple hosts using inventory files which contains a list of the hosts that ansible should manage.
-This allows for easy management of large number of hosts and simplifies the process of scalling automation tasks.
-Ansible also supports a concept called 'roles' which are collections of tasks, files and variables that can be reused across different playbooks.
-This allows for better organization and simplifies the process of automation similar tasks.
-Ansible can also be integrated with other tools such as continuos integration and continuos deployment (CI/CD) pipeline, to automate the process of configuring and managing infrastructure.
-This allows for faster and more reliable deployments as well as easier rollbacks in case of issues.
-Over all, Ansible is a powerful and flexible automation tool that can be used to automate the configuration and management of servers, networks and other IT infrastructure.
+### this is Ansible important points...
+* Ansible is an open source automation tool that can be used to automate the configuration and management of servers, networks and other IT infrastructure.
+* It is often used in conjuction with other tools such as terraform to provide a complete infrastructure as code solution.
+* Ansible uses a simple human readable language called 'YAML' to define automation tasks called 'Playbooks".
+* These playbooks are written in the form of plays, which consists of a set of tasks that are executed on one or more hosts.
+* Ansible uses a push based approach, where the automation tasks are executed on the target hosts directly rather than requiring an agent to be installed on these hosts.
+* This allows ansible to be used to automate a wide variety of system, including linux, windows and network devices.
+* One of the main benefits of ansible is its ease of use.
+* The yaml based playbooks are easy to read and understand even for non-technical users.
+* Ansible provides a large number of pre-built modules called "ansible modules" that can be used to automate common tasks can be used to automate common tasks such as installing softwares, managing users and configuring services.
+* Ansible allows for the management of multiple hosts using inventory files which contains a list of the hosts that ansible should manage.
+* This allows for easy management of large number of hosts and simplifies the process of scalling automation tasks.
+* Ansible also supports a concept called 'roles' which are collections of tasks, files and variables that can be reused across different playbooks.
+* This allows for better organization and simplifies the process of automation similar tasks.
+* Ansible can also be integrated with other tools such as continuos integration and continuos deployment (CI/CD) pipeline, to automate the process of configuring and managing infrastructure.
+* This allows for faster and more reliable deployments as well as easier rollbacks in case of issues.
+...Over all, Ansible is a powerful and flexible automation tool that can be used to automate the configuration and management of servers, networks and other IT infrastructure.
 
 # CI/CD....
 Continuous Integration and Continuous Delivery are software Engineering practices that aim to reduce the time it takes to deliver changes to software applications.
